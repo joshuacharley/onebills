@@ -1,8 +1,16 @@
-# Welcome to your Expo app 👋
+# OneBills 💳
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A centralized fintech app for bill payments. Pay your bills and help others pay theirs - all in one place.
 
-## Get started
+## 📱 About
+
+OneBills is a React Native (Expo) application that allows users to:
+- Pay their own bills (utilities, telecom, insurance, etc.)
+- Pay bills for others
+- Manage all bill services in a centralized platform
+- Track payment history and receipts
+
+## 🚀 Quick Start
 
 1. Install dependencies
 
@@ -16,35 +24,115 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. Choose your platform:
+   - Press `a` for Android emulator
+   - Press `i` for iOS simulator
+   - Scan QR code with Expo Go app
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 📚 Documentation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Planning & Architecture
+- **[MVP Plan](./MVP_PLAN.md)** - Complete MVP feature set, roadmap, and recommendations
+- **[Supabase Setup](./SUPABASE_SETUP.md)** - ✅ **Supabase backend initialized!**
+- **[Supabase Quick Start](./SUPABASE_QUICKSTART.md)** - Get started in 5 minutes
+- **[Backend Setup Guide](./BACKEND_SETUP.md)** - Alternative: NestJS or Express setup
+- **[Frontend Integration Guide](./FRONTEND_INTEGRATION.md)** - React Native API integration, state management, and examples
 
-## Get a fresh project
+### Backend: Supabase ✅
 
-When you're ready, run:
+**We're using Supabase for the backend:**
+- ✅ **PostgreSQL database** (production-ready)
+- ✅ **Built-in authentication** (email, phone, OTP)
+- ✅ **Auto-generated REST API**
+- ✅ **Row Level Security (RLS)**
+- ✅ **Real-time subscriptions**
+- ✅ **Edge Functions** for serverless logic
+- ✅ **Free tier** to start, scales easily
 
-```bash
-npm run reset-project
+**Quick Setup:**
+1. Create project at [supabase.com](https://supabase.com)
+2. Add credentials to `app.json`
+3. Run database migration from `supabase/migrations/001_initial_schema.sql`
+4. Start building! See [SUPABASE_QUICKSTART.md](./SUPABASE_QUICKSTART.md)
+
+**MVP Timeline:** 6-8 weeks
+
+**Priority Features:**
+1. ✅ User Authentication
+2. ✅ Bill Service Discovery
+3. ✅ Add/Save Bills
+4. ✅ Payment Processing
+5. ✅ Transaction History
+
+## 🏗️ Project Structure
+
+```
+onebills/
+├── app/                    # Expo Router app directory
+│   ├── (tabs)/            # Tab navigation screens
+│   └── _layout.tsx        # Root layout
+├── components/            # Reusable components
+├── lib/                   # Utilities, API clients, stores
+├── constants/             # App constants
+└── assets/               # Images, fonts, etc.
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔐 Security Considerations
 
-## Learn more
+This is a **fintech application**. Security is critical:
 
-To learn more about developing your project with Expo, look at the following resources:
+- ✅ Encrypt sensitive data at rest
+- ✅ Use HTTPS/TLS for all communications
+- ✅ Implement proper authentication (JWT)
+- ✅ PCI DSS compliance for payment data
+- ✅ KYC/AML compliance
+- ✅ Rate limiting and DDoS protection
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🛠️ Tech Stack
 
-## Join the community
+**Frontend:**
+- React Native (Expo)
+- TypeScript
+- Expo Router (File-based routing)
+- React Query (Data fetching)
+- Zustand (State management)
 
-Join our community of developers creating universal apps.
+**Backend:**
+- ✅ **Supabase** (PostgreSQL + Auth + API)
+- Payment Gateway: Stripe/Flutterwave/Paystack
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📋 Development Roadmap
+
+### Phase 1: MVP (6-8 weeks)
+- [ ] Backend setup & authentication
+- [ ] Bill service management
+- [ ] Payment processing
+- [ ] Transaction history
+- [ ] Frontend integration
+
+### Phase 2: Enhancements
+- [ ] Recurring payments
+- [ ] Bill reminders
+- [ ] Spending analytics
+- [ ] Multi-currency support
+
+## 🔗 Resources
+
+- [Expo Documentation](https://docs.expo.dev/)
+- [NestJS Documentation](https://docs.nestjs.com/)
+- [Stripe API Docs](https://stripe.com/docs/api)
+- [React Query Docs](https://tanstack.com/query)
+
+## 📝 Next Steps
+
+1. **Set up Supabase** - Follow [SUPABASE_QUICKSTART.md](./SUPABASE_QUICKSTART.md)
+2. **Install dependencies** - `npm install`
+3. **Configure credentials** - Add Supabase URL and key to `app.json`
+4. **Run database migration** - Copy SQL from `supabase/migrations/001_initial_schema.sql`
+5. **Start building** - Authentication, bills, and transactions services are ready!
+6. Review the [MVP Plan](./MVP_PLAN.md) for feature roadmap
+
+---
+
+**Note:** This is a financial application. Ensure proper security measures, compliance, and testing before production deployment.
+"# onebills" 
