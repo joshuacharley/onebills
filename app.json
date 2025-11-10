@@ -31,11 +31,11 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "imageWidth": 220,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#0B1420",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#0B1420"
           }
         }
       ]
@@ -43,6 +43,10 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "supabaseUrl": "https://qfmkcultvtacpuwayegn.supabase.co",
+      "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFmbWtjdWx0dnRhY3B1d2F5ZWduIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI3NDYzNTQsImV4cCI6MjA3ODMyMjM1NH0.phJk98dkI8ek5Fr9TX04v2Jn9ytOClOR_uHGWK1EfcQ"
     }
   }
 }

@@ -35,6 +35,7 @@ OneBills is a React Native (Expo) application that allows users to:
 - **[MVP Plan](./MVP_PLAN.md)** - Complete MVP feature set, roadmap, and recommendations
 - **[Supabase Setup](./SUPABASE_SETUP.md)** - ✅ **Supabase backend initialized!**
 - **[Supabase Quick Start](./SUPABASE_QUICKSTART.md)** - Get started in 5 minutes
+- **[Error Management](./ERROR_MANAGEMENT.md)** - Structured error handling overview
 - **[Backend Setup Guide](./BACKEND_SETUP.md)** - Alternative: NestJS or Express setup
 - **[Frontend Integration Guide](./FRONTEND_INTEGRATION.md)** - React Native API integration, state management, and examples
 
